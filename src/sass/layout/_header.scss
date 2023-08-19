@@ -1,0 +1,84 @@
+.header {
+  padding-top: 28px;
+  padding-bottom: 28px;
+}
+
+// NAVIGATION
+
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+
+.logo-image {
+  width: 70px;
+  height: auto;
+}
+
+.header-nav__list {
+  @extend %list;
+  margin-left: auto;
+  margin-right: 134px;
+  display: flex;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.header-nav__item {
+  position: relative;
+  &:not(:last-child) {
+    margin-right: 60px;
+  }
+}
+
+.header-nav__link {
+  display: block;
+  padding-top: 8px;
+  padding-bottom: 8px;
+
+  @include font(12px, 400, 1, 0.02em);
+  text-transform: uppercase;
+
+  color: $primary-text-color;
+  transition: color $duration $timing-function;
+  @extend %link;
+
+  &::before {
+    @extend %headerBefore;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: opacity $duration $timing-function,
+      transform $duration $timing-function;
+  }
+  &::after {
+    @extend %headerAfter;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: opacity $duration $timing-function,
+      transform $duration $timing-function;
+  }
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+    fill: $accent-color;
+
+    &::before,
+    &::after {
+      opacity: 1;
+      transform: scaleX(1);
+    }
+  }
+  &--active {
+    &::before {
+      @extend %headerBefore;
+      opacity: 1;
+      transform: scaleX(1);
+    }
+    &::after {
+      @extend %headerAfter;
+      opacity: 1;
+      transform: scaleX(1);
+    }
+  }
+}

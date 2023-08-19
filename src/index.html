@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project-home</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="../css/style.min.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="header-nav">
+          <a class="logo header-nav__logo" href="./index.html">
+            <img class="logo-image" src="./img/logo.svg" alt="logo"
+          /></a>
+          <ul class="header-nav__list">
+            <li class="header-nav__item">
+              <a href="./index.html" class="header-nav__link header-nav__link--active">Главная</a>
+            </li>
+            <li class="header-nav__item">
+              <a href="./gallery.html" class="header-nav__link">Галерея</a>
+            </li>
+            <li class="header-nav__item">
+              <a href="#projects" class="header-nav__link">Проекты</a>
+            </li>
+            <li class="header-nav__item">
+              <a href="./certificates.html" class="header-nav__link">Сертификаты</a>
+            </li>
+            <li class="header-nav__item">
+              <a href="#contacts" class="header-nav__link">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <!-- Hero section -->
+      <section class="hero">
+        <div class="container hero-container">
+          <div class="hero-desc">
+            <h1 class="hero-desc__title">
+              <span class="hero-desc__title--light">Project</span>Home
+            </h1>
+            <ul class="arrow-btn__list">
+              <li class="arrow-btn__item">
+                <button class="arrow-btn arrow-btn--active" type="button">
+                  <svg width="26" height="26">
+                    <use href="./img/icons.svg#icon-arrow-left" />
+                  </svg>
+                </button>
+              </li>
+              <li>
+                <button class="arrow-btn" type="button">
+                  <svg class="change-arrow" width="26" height="26">
+                    <use href="./img/icons.svg#icon-arrow-right" />
+                  </svg>
+                </button>
+              </li>
+            </ul>
+            <ul class="carousel-number__list">
+              <li class="carousel-number carousel-number--active">01</li>
+              <li class="carousel-number">02</li>
+            </ul>
+          </div>
+          <div class="hero-carousel">
+            <button type="button" class="btn hero__btn">
+              <span class="hero-carousel__btn-span">Взглянуть</span>
+              <svg class="btn__icon hero-carousel__btn-icon" width="26" height="26">
+                <use href="./img/icons.svg#icon-arrow-right" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- About Section -->
+      <section class="about">
+        <div class="container about-container">
+          <div class="about-portfolio">
+            <img
+              class="about-portfolio__img"
+              src="./img/about/img-1.jpg"
+              alt="home project example"
+              width="270"
+              height="265"
+            /><img
+              class="about-portfolio__img"
+              src="./img/about/img-2.jpg"
+              alt="home project example"
+              width="270"
+              height="140"
+            />
+            <img
+              class="about-portfolio__img"
+              src="./img/about/img-3.jpg"
+              alt="home project example"
+              width="270"
+              height="345"
+            />
+          </div>
+          <div class="about-desc">
+            <h2 class="title">О компании</h2>
+            <p class="about-desc__info">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+              has been the industry's standard dummy text ever since the 1500s, when an unknown
+              printer took a galley of type and scrambled it to make a type specimen book. It has
+              survived not only five centuries, but also the leap into electronic typesetting,
+              remaining essentially unchanged.
+            </p>
+            <button type="button" class="btn">
+              <span>ЧИТАТЬ</span>
+              <svg class="btn__icon about-desc-btn__icon" width="26" height="26">
+                <use href="./img/icons.svg#icon-arrow-right"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- Tasks Section -->
+      <section class="tasks">
+        <div class="container">
+          <h2>Основные задачи</h2>
+          <ul>
+            <li>
+              <img src="./img/tasks/task-1.png" alt="number one" width="104" height="140" />
+              <p>Создание комфортных условий и повышение качества обслуживания клиентов</p>
+            </li>
+            <li>
+              <img src="./img/tasks/task-2.png" alt="number two" width="120" height="140" />
+              <p>
+                Постоянно совершенствовать качество предоставляемых услуг путем обучения персонала,
+                закупки нового оборудования и усиленной рекламы на рынке
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- Projects Section -->
+      <section id="projects" class="projects">
+        <div class="container">
+          <h2>Наши проекты</h2>
+          <ul>
+            <li>
+              <h3>ДОСУГОВЫЙ ЦЕНТР</h3>
+              <a>
+                <span>ПОДРОБНЕЕ</span>
+                <svg class="arrow" width="22" height="12">
+                  <use href="./img/icons.svg#icon-arrow" />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <h3>Офисный центр</h3>
+              <a>
+                <span>ПОДРОБНЕЕ</span>
+                <svg class="arrow" width="22" height="12">
+                  <use href="./img/icons.svg#icon-arrow" />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <h3>Стадион</h3>
+              <a>
+                <span>ПОДРОБНЕЕ</span>
+                <svg class="arrow" width="22" height="12">
+                  <use href="./img/icons.svg#icon-arrow" />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <h3>Жилой комплекс</h3>
+              <a>
+                <span>ПОДРОБНЕЕ</span>
+                <svg class="arrow" width="22" height="12">
+                  <use href="./img/icons.svg#icon-arrow" />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <h3>Центр исскуств</h3>
+              <a>
+                <span>ПОДРОБНЕЕ</span>
+                <svg class="arrow" width="22" height="12">
+                  <use href="./img/icons.svg#icon-arrow" />
+                </svg>
+              </a>
+            </li>
+          </ul>
+          <a href="http://">
+            ВСЕ ПРОЕКТЫ
+            <svg class="arrow" width="22" height="12">
+              <use href="./img/icons.svg#icon-arrow" />
+            </svg>
+          </a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,6 @@
+.title {
+  @include font(64px, 300, 1, null);
+  margin-bottom: 32px;
+
+  color: $secondary-text-color;
+}

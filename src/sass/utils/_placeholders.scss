@@ -1,0 +1,54 @@
+%centeredFlex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%button {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+%headerBefore {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  width: 100%;
+  height: 1px;
+  background-color: $accent-color;
+  border-radius: 2px;
+  opacity: 0;
+}
+
+%headerAfter {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 1px;
+  background-color: $accent-color;
+  border-radius: 2px;
+  opacity: 0;
+}
+
+%input {
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+%list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+%link {
+  text-decoration: none;
+}

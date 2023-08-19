@@ -1,0 +1,60 @@
+.about {
+  display: flex;
+}
+
+.about-container {
+  display: flex;
+  padding-top: 30px;
+  background: linear-gradient(to bottom, $back-color 0%, $back-color 100%) no-repeat;
+  background-size: calc(100%) calc(100% - 30px);
+  background-position: top;
+}
+
+.about-portfolio {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 570px;
+  height: 435px;
+}
+
+.about-portfolio__img:first-child {
+  width: 270px;
+  height: 265px;
+}
+
+.about-portfolio__img:nth-child(2n + 2) {
+  width: 270px;
+  height: 140px;
+}
+
+.about-portfolio__img:last-child {
+  width: 270px;
+  height: 345px;
+  transform: translateY(32px);
+  align-self: flex-end;
+}
+
+.about-desc {
+  width: 492px;
+  padding-right: 92px;
+  padding-bottom: 66px;
+  margin: 0;
+  margin-left: 30px;
+}
+
+.about-desc__info {
+  @include font(16px, 300, 1.56, null);
+  margin-bottom: 24px;
+  color: $common-black;
+}
+
+.about-desc-btn__icon {
+  transition: fill $duration $timing-function;
+
+  &:hover,
+  &:focus {
+    fill: $third-text-color;
+  }
+}
