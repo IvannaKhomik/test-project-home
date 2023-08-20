@@ -1,0 +1,35 @@
+.tasks {
+  padding: 60px 0;
+}
+
+.tasks-title {
+  margin-bottom: 60px;
+}
+
+.tasks__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tasks__item {
+  display: flex;
+  width: 570px;
+}
+
+.tasks__item:first-child > img {
+  width: 70px;
+  height: 140px;
+  margin-left: 8px;
+  margin-right: 50px;
+}
+
+.tasks__item:last-child > img {
+  width: 118px;
+  height: 140px;
+  margin-left: 4px;
+  margin-right: 22px;
+}
+
+.tasks__item-desc {
+  @include font(22px, 400, 1.64, null);
+}

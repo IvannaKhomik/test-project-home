@@ -1,0 +1,75 @@
+.contacts {
+  padding-top: 60px;
+}
+
+.contacts-form {
+  margin-right: 30px;
+}
+
+.contacts-form__input {
+  display: block;
+  width: 391px;
+  padding: 14px 0 14px 22px;
+  background-color: $input-back-color;
+  color: $primary-text-color;
+  @include font(14px, 400, 1.24, 0.04em);
+  margin-bottom: 9px;
+  border: 1px solid $input-back-color;
+  position: relative;
+
+  &::placeholder {
+    color: $placeholder-color;
+    @include font(14px, 400, 1.24, 0.04);
+  }
+}
+
+.contacts-textarea {
+  resize: none;
+  height: 147px;
+  max-height: 147px;
+  margin-bottom: 22px;
+}
+
+.contacts-form__btn {
+  margin-top: 22px;
+  min-width: 222px;
+  max-width: 226px;
+  padding: 24px 0 20px;
+  background-color: $primary-text-color;
+  color: $third-text-color;
+  border: 1px solid transparent;
+  transition: border-color $duration $timing-function, background-color $duration $timing-function,
+    color $duration $timing-function;
+
+  &:hover,
+  &:focus {
+    background-color: $third-text-color;
+    color: $primary-text-color;
+    border-color: $primary-text-color;
+  }
+}
+
+.contacts__icon {
+  margin-left: 16px;
+  padding-bottom: 6px;
+  fill: $third-text-color;
+  transition: fill $duration $timing-function;
+
+  &:hover,
+  &:focus {
+    fill: $primary-text-color;
+  }
+}
+
+.contacts-form__wrap {
+  display: flex;
+}
+
+.contacts-info {
+  margin-top: 22px;
+}
+
+.contacts-img {
+  width: 749px;
+  height: 369px;
+}

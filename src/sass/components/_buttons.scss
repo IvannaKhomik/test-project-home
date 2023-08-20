@@ -25,4 +25,15 @@
     margin-left: 16px;
     fill: $primary-text-color;
   }
+
+  & > svg {
+    transition: transform $duration $timing-function;
+  }
+
+  &:hover,
+  &:focus {
+    & > svg {
+      transform: translateX(16px);
+    }
+  }
 }
