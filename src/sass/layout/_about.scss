@@ -40,13 +40,17 @@
 
 .about-desc {
   width: 492px;
-  padding-right: 70px;
+  padding-right: 90px;
   margin-left: 30px;
+}
+
+.about-desc > .title {
+  margin-bottom: 16px;
 }
 
 .about-desc__info {
   @include font(16px, 300, 1.56, null);
-  margin-bottom: 22px;
+  margin-bottom: 24px;
   color: $common-black;
 }
 

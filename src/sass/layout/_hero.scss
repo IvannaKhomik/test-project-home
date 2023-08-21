@@ -8,6 +8,11 @@
   height: 829px;
 }
 
+.animate__animated {
+  animation-duration: 4s;
+  animation-delay: 0.2s;
+}
+
 .hero-desc {
   width: 402px;
   overflow-x: hidden;
@@ -16,12 +21,12 @@
 .hero-desc__title {
   margin-top: 332px;
 
-  @include font(64px, 700, 1, _);
+  @include font(64px, 700, 1, null);
   text-align: left;
   text-transform: uppercase;
   &--light {
     display: block;
-    @include font(64px, 300, 1, _);
+    @include font(64px, 300, 1, null);
     color: $secondary-text-color;
   }
 }
@@ -94,7 +99,7 @@
 
 .carousel-number {
   color: $secondary-text-color;
-  @include font(24px, 400, 1, _);
+  @include font(24px, 400, 1, null);
   transition: color $duration $timing-function;
 
   &--active {

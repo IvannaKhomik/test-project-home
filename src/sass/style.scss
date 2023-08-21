@@ -1,5 +1,7 @@
+@import 'animate.css';
 @import './base/normalize';
 @import './utils/variables';
+@import './base/fonts';
 @import './base/common';
 @import './reset/reset';
 
@@ -19,3 +21,4 @@
 @import './layout/tasks';
 @import './layout/projects';
 @import './layout/contacts';
+@import './layout/footer';

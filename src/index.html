@@ -4,13 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project-home</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
-      rel="stylesheet"
-    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="../css/style.min.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
   </head>
   <body>
     <header class="header">
@@ -44,7 +48,7 @@
       <section class="hero">
         <div class="container hero-container">
           <div class="hero-desc">
-            <h1 class="hero-desc__title">
+            <h1 class="hero-desc__title animate__animated animate__fadeInLeft">
               <span class="hero-desc__title--light">Project</span>Home
             </h1>
             <ul class="arrow-btn__list">
@@ -68,7 +72,7 @@
               <li class="carousel-number">02</li>
             </ul>
           </div>
-          <div class="hero-carousel">
+          <div class="hero-carousel animate__animated animate__fadeInUp">
             <button type="button" class="btn hero__btn">
               <span class="hero-carousel__btn-span">Взглянуть</span>
               <svg class="btn__icon hero-carousel__btn-icon" width="26" height="26">
@@ -217,7 +221,7 @@
         </div>
       </section>
       <!-- Contacts Section -->
-      <section class="contacts">
+      <section id="contacts" class="contacts">
         <div class="container">
           <h2 class="title">Связаться с нами</h2>
           <div class="contacts-form__wrap">
@@ -260,12 +264,126 @@
                 </svg>
               </button>
             </form>
-
             <img class="contacts-img" src="./img/contacts/contacts-img.jpg" alt="man with phone" />
-            />
           </div>
         </div>
       </section>
     </main>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-container">
+          <nav class="footer-nav">
+            <a class="logo footer-nav__logo" href="./index.html">
+              <img src="./img/logo-light.png" alt="logo"
+            /></a>
+            <div class="footer-nav__wrap">
+              <h4 class="footer-title">Информация</h4>
+              <ul class="footer-nav__list">
+                <li class="footer-nav__item">
+                  <a
+                    href="./index.html"
+                    class="footer-nav__link footer__wrap-link footer-nav__link--active"
+                    >Главная</a
+                  >
+                </li>
+                <li class="footer-nav__item">
+                  <a href="./gallery.html" class="footer-nav__link footer__wrap-link">Галерея</a>
+                </li>
+                <li class="footer-nav__item">
+                  <a href="#projects" class="footer-nav__link footer__wrap-link">Проекты</a>
+                </li>
+                <li class="footer-nav__item">
+                  <a href="./certificates.html" class="footer-nav__link footer__wrap-link"
+                    >Сертификаты</a
+                  >
+                </li>
+                <li class="footer-nav__item">
+                  <a href="#contacts" class="footer-nav__link footer__wrap-link">Контакты</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <address class="footer-address__wrap">
+            <h4 class="footer-title">Контакты</h4>
+            <ul class="footer-address__list">
+              <li class="footer-address__item">
+                <div class="footer-address__icon">
+                  <svg class="address-icon" width="18" height="20">
+                    <use href="./img/icons.svg#icon-map" />
+                  </svg>
+                </div>
+                <a
+                  class="footer-nav__link address-nav__link"
+                  href="https://goo.gl/maps/rSRtYq1V8WZqgFJ37"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  100000, Республика Казахстан, г. Караганда, ул. Телевизионная 10
+                </a>
+              </li>
+              <li class="footer-address__item">
+                <div class="footer-address__icon">
+                  <svg class="address-icon" width="24" height="24">
+                    <use href="./img/icons.svg#icon-phone"></use>
+                  </svg>
+                </div>
+                <a class="footer-nav__link address-nav__link" href="tel:+380991111111"
+                  >+38 (000) 000 00 00</a
+                >
+              </li>
+              <li class="footer-address__item">
+                <div class="footer-address__icon">
+                  <svg class="address-icon" width="18" height="18">
+                    <use href="./img/icons.svg#icon-mail"></use>
+                  </svg>
+                </div>
+                <a class="footer-nav__link address-nav__link" href="mailto:mail@gmail.com"
+                  >mail@gmail.com</a
+                >
+              </li>
+            </ul>
+          </address>
+          <div class="footer-socials">
+            <h4 class="footer-title">Социальные сети</h4>
+            <ul class="socials__list">
+              <li class="socials__item">
+                <a class="socials__link" href="https://www.facebook.com/">
+                  <svg class="socials__icon" width="20" height="20">
+                    <use href="./img/icons.svg#icon-facebook" />
+                  </svg>
+                </a>
+              </li>
+              <li class="socials__item">
+                <a class="socials__link" href="https://www.twitter.com/">
+                  <svg class="socials__icon" width="20" height="20">
+                    <use href="./img/icons.svg#icon-twitter" />
+                  </svg>
+                </a>
+              </li>
+              <li class="socials__item">
+                <a class="socials__link" href="https://www.linkedin.com/">
+                  <svg class="socials__icon" width="20" height="20">
+                    <use href="./img/icons.svg#icon-linkedin" />
+                  </svg>
+                </a>
+              </li>
+              <li class="socials__item">
+                <a class="socials__link" href="https://www.pinterest.com/">
+                  <svg class="socials__icon" width="20" height="20">
+                    <use href="./img/icons.svg#icon-pinterest" />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <p>&copy 2019 Digital Project. Все права защищены.</p>
+        </div>
+        >
+      </div>
+      <div class="underline"></div>
+    </footer>
   </body>
 </html>

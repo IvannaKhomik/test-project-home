@@ -10,9 +10,8 @@
   align-items: center;
 }
 
-.logo-image {
+.header-nav__logo {
   width: 70px;
-  height: auto;
 }
 
 .header-nav__list {
@@ -33,8 +32,8 @@
 
 .header-nav__link {
   display: block;
-  padding-top: 8px;
-  padding-bottom: 8px;
+  padding-top: 6px;
+  padding-bottom: 6px;
 
   @include font(12px, 400, 1, 0.02em);
   text-transform: uppercase;
@@ -47,22 +46,17 @@
     @extend %headerBefore;
     transform: scaleX(0);
     transform-origin: left;
-    transition: opacity $duration $timing-function,
-      transform $duration $timing-function;
+    transition: opacity $duration $timing-function, transform $duration $timing-function;
   }
   &::after {
     @extend %headerAfter;
     transform: scaleX(0);
     transform-origin: left;
-    transition: opacity $duration $timing-function,
-      transform $duration $timing-function;
+    transition: opacity $duration $timing-function, transform $duration $timing-function;
   }
 
   &:hover,
   &:focus {
-    color: $accent-color;
-    fill: $accent-color;
-
     &::before,
     &::after {
       opacity: 1;
