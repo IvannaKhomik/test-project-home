@@ -2,6 +2,7 @@
   "name": "test-project-home",
   "version": "1.0.0",
   "description": "test-project-home",
+  "homepage": "https://ivannakhomik.github.io/test-project-home/",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
