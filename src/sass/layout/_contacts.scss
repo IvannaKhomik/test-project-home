@@ -1,6 +1,13 @@
 .contacts {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding: 24px 0;
+
+  @media screen and (min-width: 768px) {
+    padding: 24px 0;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding: 60px 0;
+  }
 }
 
 .contacts .title {
@@ -8,12 +15,17 @@
 }
 
 .contacts-form {
-  margin-right: 30px;
+  width: 100%;
+
+  @media screen and (min-width: 768px) {
+    width: 391px;
+    margin-right: 30px;
+  }
 }
 
 .contacts-form__input {
   display: block;
-  width: 391px;
+  width: 100%;
   padding: 14px 0 14px 22px;
   background-color: $input-back-color;
   color: $primary-text-color;
@@ -31,8 +43,12 @@
 .contacts-textarea {
   resize: none;
   height: 147px;
-  max-height: 147px;
+  max-height: 124px;
   margin-bottom: 22px;
+
+  @media screen and (min-width: 1200px) {
+    max-height: 147px;
+  }
 }
 
 .contacts-form__btn {
@@ -78,6 +94,19 @@
 }
 
 .contacts-img {
-  width: 749px;
-  height: 369px;
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+    background-image: url(/src/img/contacts/contacts-img-tablet.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 367px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    background-image: url(/src/img/contacts/contacts-img.jpg);
+    width: 749px;
+    height: 369px;
+  }
 }

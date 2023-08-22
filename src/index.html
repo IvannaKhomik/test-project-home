@@ -21,8 +21,8 @@
       <div class="container">
         <nav class="header-nav">
           <a class="logo header-nav__logo" href="./index.html">
-            <img class="logo-image" src="./img/logo.svg" alt="logo"
-          /></a>
+            <img class="logo-image" src="./img/logo.svg" alt="logo" />
+          </a>
           <ul class="header-nav__list">
             <li class="header-nav__item">
               <a href="./index.html" class="header-nav__link header-nav__link--active">Главная</a>
@@ -40,6 +40,11 @@
               <a href="#contacts" class="header-nav__link">Контакты</a>
             </li>
           </ul>
+          <button class="burger-menu" type="button">
+            <svg width="30" height="30">
+              <use href="./img/icons.svg#burger-menu" />
+            </svg>
+          </button>
         </nav>
       </div>
     </header>
@@ -71,6 +76,12 @@
               <li class="carousel-number carousel-number--active">01</li>
               <li class="carousel-number">02</li>
             </ul>
+            <button type="button" class="btn hero__btn hero-desc__btn">
+              <span class="hero-carousel__btn-span">Взглянуть</span>
+              <svg class="btn__icon hero-carousel__btn-icon" width="26" height="26">
+                <use href="./img/icons.svg#icon-arrow-right" />
+              </svg>
+            </button>
           </div>
           <div class="hero-carousel animate__animated animate__fadeInUp">
             <button type="button" class="btn hero__btn">
@@ -92,7 +103,8 @@
               alt="home project example"
               width="270"
               height="265"
-            /><img
+            />
+            <img
               class="about-portfolio__img"
               src="./img/about/img-2.jpg"
               alt="home project example"
@@ -228,7 +240,7 @@
             <form class="contacts-form">
               <input type="text" class="contacts-form__input" name="user-name" placeholder="Имя" />
               <input
-                type="phone"
+                type="tel"
                 class="contacts-form__input asterisk_input"
                 name="user-phone"
                 placeholder="Номер телефона*"
@@ -264,7 +276,7 @@
                 </svg>
               </button>
             </form>
-            <img class="contacts-img" src="./img/contacts/contacts-img.jpg" alt="man with phone" />
+            <div class="contacts-img"></div>
           </div>
         </div>
       </section>
@@ -275,8 +287,8 @@
         <div class="footer-container">
           <nav class="footer-nav">
             <a class="logo footer-nav__logo" href="./index.html">
-              <img src="./img/logo-light.png" alt="logo"
-            /></a>
+              <img src="./img/logo-light.png" alt="logo" />
+            </a>
             <div class="footer-nav__wrap">
               <h4 class="footer-title">Информация</h4>
               <ul class="footer-nav__list">
@@ -304,7 +316,7 @@
               </ul>
             </div>
           </nav>
-          <address class="footer-address__wrap">
+          <div class="footer-address__wrap">
             <h4 class="footer-title">Контакты</h4>
             <ul class="footer-address__list">
               <li class="footer-address__item">
@@ -319,7 +331,8 @@
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  100000, Республика Казахстан, г. Караганда, ул. Телевизионная 10
+                  100000, Республика Казахстан, <span class="address-span">г. Караганда,</span>
+                  <span>ул. Телевизионная 10</span>
                 </a>
               </li>
               <li class="footer-address__item">
@@ -343,7 +356,7 @@
                 >
               </li>
             </ul>
-          </address>
+          </div>
           <div class="footer-socials">
             <h4 class="footer-title">Социальные сети</h4>
             <ul class="socials__list">
@@ -379,7 +392,7 @@
           </div>
         </div>
         <div class="footer-copyright">
-          <p>&copy 2019 Digital Project. Все права защищены.</p>
+          <p>&copy; 2019 Digital Project. Все права защищены.</p>
         </div>
         >
       </div>

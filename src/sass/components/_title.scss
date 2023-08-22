@@ -1,5 +1,13 @@
 .title {
-  @include font(64px, 300, 1, null);
+  @include font(44px, 300, 1, null);
 
   color: $secondary-text-color;
+
+  @media screen and (min-width: 768px) {
+    @include font(54px, 300, 1, null);
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include font(64px, 300, 1, null);
+  }
 }

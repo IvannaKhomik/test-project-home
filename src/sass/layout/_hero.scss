@@ -1,11 +1,22 @@
 .hero {
   margin: 0 auto;
-  padding: 4px 0 60px;
+  padding-bottom: 16px;
+
+  @media screen and (min-width: 768px) {
+    padding-bottom: 24px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding: 4px 0 60px;
+  }
 }
 
 .hero-container {
   display: flex;
-  height: 829px;
+
+  @media screen and (min-width: 1200px) {
+    height: 829px;
+  }
 }
 
 .animate__animated {
@@ -14,34 +25,71 @@
 }
 
 .hero-desc {
-  width: 402px;
   overflow-x: hidden;
+  width: 100%;
+  background-image: url(/src/img/hero/hero-mob.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  @media screen and (min-width: 768px) {
+    background-image: url(/src/img/hero/hero-tablet.jpg);
+  }
+
+  @media screen and (max-width: 1199px) {
+    height: 554px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 402px;
+    background-image: none;
+  }
 }
 
 .hero-desc__title {
-  margin-top: 332px;
+  margin-top: 24px;
+  margin-left: 24px;
 
-  @include font(64px, 700, 1, null);
+  @include font(52px, 700, 1, null);
   text-align: left;
   text-transform: uppercase;
   &--light {
     display: block;
-    @include font(64px, 300, 1, null);
-    color: $secondary-text-color;
+    @include font(52px, 300, 1, null);
+    color: $third-text-color;
+
+    @media screen and (min-width: 768px) {
+      @include font(64px, 300, 1, null);
+    }
+
+    @media screen and (min-width: 1200px) {
+      color: $secondary-text-color;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-top: 54px;
+    margin-left: 32px;
+    @include font(64px, 700, 1, null);
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-top: 332px;
+    margin-left: 0;
   }
 }
 
 .arrow-btn__list {
   display: flex;
   justify-content: space-between;
-  margin-top: 100px;
-  margin-left: 6px;
-  width: 130px;
+  margin-top: 60px;
+  margin-left: 24px;
+  width: 110px;
   position: relative;
 
   &::after {
     content: '';
-    display: block;
+    display: none;
     position: absolute;
     left: 100%;
     top: 50%;
@@ -51,13 +99,27 @@
     height: 1px;
     background-color: $icon-back-color;
     border-radius: 2px;
+
+    @media screen and (min-width: 1200px) {
+      display: block;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-top: 100px;
+    margin-left: 32px;
+    width: 130px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 6px;
   }
 }
 
 .arrow-btn {
   @extend %centeredFlex;
-  width: 53px;
-  height: 53px;
+  width: 40px;
+  height: 40px;
   @extend %button;
   border: 1px solid $icon-back-color;
   background-color: $third-text-color;
@@ -71,10 +133,18 @@
   &:focus {
     background-color: $third-back-color;
   }
+
+  @media screen and (min-width: 768px) {
+    width: 53px;
+    height: 53px;
+  }
+
+  @media screen and (min-width: 1200px) {
+  }
 }
 
 .carousel-number__list {
-  display: flex;
+  display: none;
   margin-top: 90px;
   width: 142px;
   justify-content: space-between;
@@ -83,7 +153,7 @@
 
   &::after {
     content: '';
-    display: block;
+    display: none;
     position: absolute;
     left: 50px;
     top: 50%;
@@ -94,6 +164,15 @@
     height: 2px;
     background-color: #e0e0e0;
     border-radius: 2px;
+
+    @media screen and (min-width: 1200px) {
+      display: block;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    margin-left: 32px;
   }
 }
 
@@ -113,6 +192,14 @@
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  display: none;
+
+  @media screen and (min-width: 768px) {
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: block;
+  }
 }
 
 .hero-carousel__btn-span {
@@ -131,4 +218,10 @@
 .hero__btn {
   position: absolute;
   bottom: 0;
+}
+
+.hero-desc__btn {
+  @media screen and (min-width: 1200px) {
+    display: none;
+  }
 }

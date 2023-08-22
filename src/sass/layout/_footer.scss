@@ -1,27 +1,70 @@
 .footer {
   background-color: $footer-back-color;
-  padding-top: 60px;
+  padding-top: 24px;
   position: relative;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 60px;
+  }
 }
 
 .footer-container {
   display: flex;
-  margin-bottom: 60px;
+  flex-wrap: wrap;
+  margin-bottom: 34px;
+
+  @media screen and (max-width: 767px) {
+    justify-content: space-between;
+  }
+
+  @media screen and (min-width: 768px) {
+    flex-wrap: nowrap;
+    margin-bottom: 60px;
+  }
 }
 
 .footer-nav {
   display: flex;
-  margin-right: 100px;
+  margin-right: 16px;
+
+  @media screen and (min-width: 768px) {
+    margin-right: 24px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 100px;
+  }
 }
 
 .footer-nav__logo {
-  width: 144px;
-  margin-right: 100px;
+  width: 70px;
+
+  @media screen and (min-width: 468px) {
+    width: 100px;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-right: 32px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 100px;
+    width: 144px;
+  }
 }
 
 .footer-nav__wrap {
-  width: 154px;
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    width: 132px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 154px;
+  }
 }
+
 .footer-title {
   margin-bottom: 20px;
   @include font(16px, 700, 1.25, null);
@@ -41,6 +84,18 @@
   @include font(14px, 500, 1.71, 0.03em);
   color: $third-text-color;
   transition: color $duration $timing-function;
+
+  @media screen and (max-width: 1199px) {
+    & span {
+      display: block;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    & .address-span {
+      display: inline-block;
+    }
+  }
 }
 
 .footer__wrap-link {
@@ -64,17 +119,33 @@
 }
 
 .footer-address__wrap {
-  font-style: inherit;
+  width: 200px;
+
+  @media screen and (min-width: 468px) {
+    width: 300px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 270px;
+  }
 }
 
 .footer-address__item {
-  margin-bottom: 32px;
+  margin-bottom: 16px;
   padding-top: 6px;
   padding-bottom: 6px;
   display: flex;
   position: relative;
   &:first-child {
-    margin-bottom: 54px;
+    margin-bottom: 20px;
+
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 54px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 32px;
   }
 
   &:last-child {
@@ -110,8 +181,32 @@
 }
 
 .footer-socials {
-  margin-right: 60px;
-  margin-left: auto;
+  margin: 0 auto;
+
+  @media screen and (max-width: 768px) {
+    margin-top: 32px;
+
+    & .footer-title {
+      position: absolute;
+      white-space: nowrap;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      border: 0;
+      padding: 0;
+      clip: rect(0 0 0 0);
+      clip-path: inset(50%);
+      margin: -1px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-left: auto;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 60px;
+  }
 }
 
 .socials__list {
@@ -155,5 +250,5 @@
   height: 1px;
   width: 100%;
   background-color: $third-text-color;
-  top: 380px;
+  bottom: 96px;
 }

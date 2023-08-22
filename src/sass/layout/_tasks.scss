@@ -1,35 +1,100 @@
 .tasks {
-  padding: 60px 0;
+  padding: 24px 0;
+
+  @media screen and (min-width: 768px) {
+    padding: 24px 0;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding: 60px 0;
+  }
 }
 
 .tasks-title {
-  margin-bottom: 60px;
+  margin-bottom: 32px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 32px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 60px;
+  }
 }
 
 .tasks__list {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .tasks__item {
   display: flex;
-  width: 570px;
+  width: 100%;
+
+  &:first-child {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 16px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 570px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .tasks__item:first-child > img {
-  width: 70px;
-  height: 140px;
+  width: 35px;
+  height: 70px;
   margin-left: 8px;
   margin-right: 50px;
+
+  @media screen and (min-width: 768px) {
+    width: 52px;
+    height: 105px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 70px;
+    height: 140px;
+  }
 }
 
 .tasks__item:last-child > img {
-  width: 118px;
-  height: 140px;
+  width: 64px;
+  height: 70px;
   margin-left: 4px;
   margin-right: 22px;
+
+  @media screen and (min-width: 768px) {
+    width: 96px;
+    height: 105px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 118px;
+    height: 140px;
+  }
 }
 
 .tasks__item-desc {
-  @include font(22px, 400, 1.64, null);
+  @include font(14px, 400, 1.64, null);
+
+  @media screen and (max-width: 767px) {
+    min-width: 320px;
+    width: 350px;
+  }
+  @media screen and (min-width: 768px) {
+    @include font(16px, 400, 1.64, null);
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include font(22px, 400, 1.64, null);
+  }
 }

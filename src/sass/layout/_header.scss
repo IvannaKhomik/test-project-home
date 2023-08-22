@@ -1,6 +1,16 @@
 .header {
-  padding-top: 28px;
-  padding-bottom: 28px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 28px;
+    padding-bottom: 28px;
+  }
 }
 
 // NAVIGATION
@@ -14,19 +24,54 @@
   width: 70px;
 }
 
+.burger-menu {
+  @extend %button;
+  @extend %centeredFlex;
+
+  font-family: inherit;
+  font-style: inherit;
+  border: none;
+  min-width: 40px;
+  background-color: $third-text-color;
+  color: $primary-text-color;
+  margin-left: auto;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: #5d6d7e;
+  }
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
 .header-nav__list {
+  display: none;
   @extend %list;
   margin-left: auto;
-  margin-right: 134px;
-  display: flex;
   padding-top: 12px;
   padding-bottom: 12px;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 134px;
+  }
 }
 
 .header-nav__item {
   position: relative;
   &:not(:last-child) {
-    margin-right: 60px;
+    margin-right: 24px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    &:not(:last-child) {
+      margin-right: 60px;
+    }
   }
 }
 
