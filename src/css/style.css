@@ -1463,6 +1463,7 @@ img {
 }
 @media screen and (min-width: 768px) {
   .footer-nav__wrap {
+    display: block;
     width: 132px;
   }
 }
