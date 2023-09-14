@@ -98,14 +98,14 @@
 
   @media screen and (min-width: 768px) {
     display: block;
-    background-image: url(/src/img/contacts/contacts-img-tablet.jpg);
+    background-image: url("../img/contacts/contacts-img-tablet.jpg");
     background-repeat: no-repeat;
     background-size: contain;
     width: 367px;
   }
 
   @media screen and (min-width: 1200px) {
-    background-image: url(/src/img/contacts/contacts-img.jpg);
+    background-image: url("../img/contacts/contacts-img.jpg");
     width: 749px;
     height: 369px;
   }

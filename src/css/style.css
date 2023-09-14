@@ -568,14 +568,14 @@ img {
 .hero-desc {
   overflow-x: hidden;
   width: 100%;
-  background-image: url(/src/img/hero/hero-mob.jpg);
+  background-image: url("../img/hero/hero-mob.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
 }
 @media screen and (min-width: 768px) {
   .hero-desc {
-    background-image: url(/src/img/hero/hero-tablet.jpg);
+    background-image: url("../img/hero/hero-tablet.jpg");
   }
 }
 @media screen and (max-width: 1199px) {
@@ -737,7 +737,7 @@ img {
 
 .hero-carousel {
   flex-grow: 1;
-  background-image: url(/src/img/hero/hero.jpg);
+  background-image: url("../img/hero/hero.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -1381,7 +1381,7 @@ img {
 @media screen and (min-width: 768px) {
   .contacts-img {
     display: block;
-    background-image: url(/src/img/contacts/contacts-img-tablet.jpg);
+    background-image: url("../img/contacts/contacts-img-tablet.jpg");
     background-repeat: no-repeat;
     background-size: contain;
     width: 367px;
@@ -1389,7 +1389,7 @@ img {
 }
 @media screen and (min-width: 1200px) {
   .contacts-img {
-    background-image: url(/src/img/contacts/contacts-img.jpg);
+    background-image: url("../img/contacts/contacts-img.jpg");
     width: 749px;
     height: 369px;
   }
@@ -1463,6 +1463,7 @@ img {
 }
 @media screen and (min-width: 768px) {
   .footer-nav__wrap {
+    display: block;
     width: 132px;
   }
 }

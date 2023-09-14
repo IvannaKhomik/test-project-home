@@ -13,36 +13,40 @@ const imagemin = require("gulp-imagemin");
 const browserSync = require("browser-sync").create();
 
 function buildCSS() {
-  return gulp
-    .src("src/sass/*.scss")
-    .pipe(sass().on("error", sass.logError))
-    .pipe(concat("style.scss"))
-    .pipe(
-      autoprefixer({
-        cascade: true,
-      })
-    )
-    .pipe(cssmin())
-    .pipe(rename({ suffix: ".min" }))
-    .pipe(
-      purgecss({
-        content: ["src/**/*.pug"],
-      })
-    )
-    .pipe(gulp.dest("dist/sass"))
-    .pipe(browserSync.stream());
+  return (
+    gulp
+      .src("src/sass/*.scss")
+      .pipe(sass().on("error", sass.logError))
+      .pipe(concat("style.css"))
+      .pipe(
+        autoprefixer({
+          cascade: true,
+        })
+      )
+      .pipe(cssmin())
+      .pipe(rename({ suffix: ".min" }))
+      // .pipe(
+      //   purgecss({
+      //     content: ["src/**/*.pug"],
+      //   })
+      // )
+      .pipe(gulp.dest("dist/css"))
+      .pipe(browserSync.stream())
+  );
 }
 
 function buildHTML() {
-  return gulp
-    .src("src/*.html")
-    .pipe(htmlmin({ collapseWhitespace: false }))
-    .pipe(
-      pug({
-        pretty: true,
-      })
-    )
-    .pipe(gulp.dest("dist"));
+  return (
+    gulp
+      .src("src/*.html")
+      .pipe(htmlmin({ collapseWhitespace: true }))
+      // .pipe(
+      //   pug({
+      //     pretty: true,
+      //   })
+      // )
+      .pipe(gulp.dest("dist"))
+  );
 }
 
 function buildJS() {
@@ -55,7 +59,7 @@ function buildJS() {
 }
 
 function buildImages() {
-  return gulp.src("src/img/*").pipe(imagemin()).pipe(gulp.dest("dist/img"));
+  return gulp.src("src/img/**/*").pipe(imagemin()).pipe(gulp.dest("dist/img"));
 }
 
 function clean() {
@@ -63,10 +67,7 @@ function clean() {
 }
 
 function build() {
-  return gulp.series([
-    clean,
-    gulp.parallel([buildImages, buildCSS, buildHTML, buildJS]),
-  ]);
+  return gulp.series([clean, gulp.parallel([buildImages, buildCSS, buildHTML, buildJS])]);
 }
 
 function start() {

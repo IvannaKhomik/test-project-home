@@ -27,13 +27,13 @@
 .hero-desc {
   overflow-x: hidden;
   width: 100%;
-  background-image: url(/src/img/hero/hero-mob.jpg);
+  background-image: url("../img/hero/hero-mob.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
 
   @media screen and (min-width: 768px) {
-    background-image: url(/src/img/hero/hero-tablet.jpg);
+    background-image: url("../img/hero/hero-tablet.jpg");
   }
 
   @media screen and (max-width: 1199px) {
@@ -88,7 +88,7 @@
   position: relative;
 
   &::after {
-    content: '';
+    content: "";
     display: none;
     position: absolute;
     left: 100%;
@@ -152,7 +152,7 @@
   position: relative;
 
   &::after {
-    content: '';
+    content: "";
     display: none;
     position: absolute;
     left: 50px;
@@ -188,7 +188,7 @@
 
 .hero-carousel {
   flex-grow: 1;
-  background-image: url(/src/img/hero/hero.jpg);
+  background-image: url("../img/hero/hero.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
